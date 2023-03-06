@@ -38,6 +38,7 @@ func AddNewWinner(res http.ResponseWriter, req *http.Request) {
 	if !isTokenValid {
 		res.WriteHeader(http.StatusUnauthorized)
 	} else {
+		data.AddNewWinner(req.Body)
 		res.WriteHeader(http.StatusCreated)
 	}
 }
