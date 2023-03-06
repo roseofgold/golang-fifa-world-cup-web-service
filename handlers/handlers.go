@@ -52,6 +52,7 @@ func WinnersHandler(res http.ResponseWriter, req *http.Request) {
 	switch req.Method {
 	case http.MethodGet:
 		ListWinners(res, req)
-
+	case http.MethodPost:
+		AddNewWinner(res, req)
 	}
 }
